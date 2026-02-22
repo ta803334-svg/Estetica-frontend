@@ -43,11 +43,11 @@ function Formulario() {
       
       const numeroEmpresa = "5583987867624"; // COLOQUE O NÚMERO DA EMPRESA AQUI (com DDD e sem espaços)
 
-      const mensagem = encodeURIComponent(`Novo agendameno %0A%0A` +
-        `*Nome Completo:* ${dadosFormulario.nomeCompleto}%0A` +
-        `*Horário:* ${dadosFormulario.horario} ` +
-        `*Serviço:* ${dadosFormulario.servicos}%0A` +
-        `*Telefone:* ${dadosFormulario.numeroTelefone}%0A` )
+      const mensagem = encodeURIComponent(`Novo agendamento!` +
+        `Nome Completo: ${dadosFormulario.nomeCompleto}` +
+        `Horário: ${dadosFormulario.horario} ` +
+        `Serviço: ${dadosFormulario.servicos}` +
+        `Telefone: ${dadosFormulario.numeroTelefone}` )
 
       const urlWhatsapp = `https://wa.me/${numeroEmpresa}?text=${mensagem}`;
 
