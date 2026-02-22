@@ -1,0 +1,169 @@
+/* --- RESET E BASE --- */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.Body-Sobre {
+    background-color: #f4f7f6; /* Um fundo leve para destacar os cards brancos */
+     min-width: 100%;
+  height: 300vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+} 
+
+/* --- HEADER (Padronizado com as outras páginas) --- */
+header {
+    background-color: #7717d1;
+    width: 100%;
+    padding: 10px 5%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    height: 119px;
+}
+
+header img {
+    width: 110px;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+}
+
+#nav {
+    display: flex;
+    gap: 15px;
+}
+
+#link {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    padding: 8px 12px;
+    transition: 0.3s;
+}
+
+#link:hover {
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 8px;
+}
+
+/* --- SEÇÃO QUEM SOMOS (DESTAQUE) --- */
+.quemsomos {
+    width: 100%;
+    height: 150vh;
+    padding: 80px 10%;
+    background-color: #7717d1;
+    background-image: url("./vitoria.png");
+    background-repeat: no-repeat;
+    background-size: contain;
+    color: white;
+    text-align: center;
+    clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%); /* Efeito moderno de corte */
+    margin-bottom: 40px;
+
+}
+
+.quemsomos h1 {
+    font-size: 3rem;
+    margin-bottom: 20px;
+    width: 66%;
+    margin-left: 17%;
+    border-radius: 10px;
+    margin-top: 499px;
+}
+
+.quemsomos p {
+    font-size: 1.2rem;
+    max-width: 800px;
+    margin: 0 auto;
+    line-height: 1.6;
+    background: linear-gradient(to right, #7717d1,#bebfbe);
+    border-radius: 10px;
+    color: white;
+    font-weight: 600;
+}
+
+/* --- CONTAINER DE CARDS (Missão, Visão, Valor) --- */
+/* Como não podemos mudar o HTML, vamos usar o Body-Sobre como grid para os itens restantes */
+.missao, .visao, .valor {
+    background: white;
+    width: 90%;
+    max-width: 800px;
+    margin: 20px 0;
+    padding: 40px;
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+    border-left: 8px solid #7717d1; /* Detalhe roxo lateral */
+    transition: transform 0.3s ease;
+    position: relative;
+}
+
+.missao:hover, .visao:hover, .valor:hover {
+    transform: translateY(-5px);
+}
+
+.missao h1, .visao h1, .valor h1 {
+    color: #7717d1;
+    font-size: 1.8rem;
+    margin-bottom: 15px;
+    display: flex;
+    align-items: center;
+}
+
+.missao p, .visao p, .valor p {
+    color: #555;
+    font-size: 1.1rem;
+    line-height: 1.5;
+}
+
+/* --- RESPONSIVIDADE --- */
+
+/* Tablets */
+@media (max-width: 992px) {
+    .quemsomos h1 { font-size: 2.5rem; }
+    .quemsomos { padding: 60px 5%; }
+}
+
+/* Celulares */
+@media (max-width: 768px) {
+    .Body-Sobre{
+        height: 230vh;
+    }
+    header {
+        flex-direction: column;
+        gap: 15px;
+        padding: 19px;
+        #link{
+            margin-top: -40px;
+        }
+        img{
+            height: 100px;
+            margin-top: -6px;
+        }
+    }
+
+    .quemsomos {
+        clip-path: none; /* Remove o corte no celular para ganhar espaço */
+        padding: 40px 20px;
+        height: 70vh;
+    }
+
+    .quemsomos h1 { font-size: 2rem; margin-top: 190px; background: transparent; }
+    .quemsomos p { font-size: 1rem; height: 40vh; margin-top: -10px; background: linear-gradient(to right, #7717d1,#bebfbe); }
+    .missao, .visao, .valor {
+        padding: 25px;
+        width: 95%;
+    }
+
+    .missao h1, .visao h1, .valor h1 {
+        font-size: 1.5rem;
+    }
+}

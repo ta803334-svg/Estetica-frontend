@@ -1,0 +1,883 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+.Body-Home {
+  min-width: 100%;
+  height: 634vh;
+  position: relative;
+  background: linear-gradient(to right, #afa2bb, #7717d1);
+
+  header {
+    display: flex;
+    /* ADICIONE ESTA LINHA - Fundamental */
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: #7717d1;
+    padding: 10px 5%;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 9999;
+    /* Aumentado para garantir que fique acima de TUDO */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    height: 110px;
+    /* Definir uma altura ajuda a alinhar o conteúdo seguinte */
+
+    .logo {
+      width: 385px;
+
+    }
+  }
+}
+
+/* 2. HEADER */
+
+
+
+#nav {
+  display: flex;
+  gap: 15px;
+}
+
+#link {
+  text-decoration: none;
+  color: white;
+  font-weight: bold;
+  padding: 8px 12px;
+  transition: 0.3s;
+}
+
+#link:hover {
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 8px;
+}
+
+#texto1 {
+  position: relative;
+  text-align: center;
+  background: linear-gradient(to right, #cbc3e5, #661b70d0);
+  width: 100%;
+  /* 100% da largura da tela */
+  height: 610px;
+  /* Definimos uma altura fixa para não virar um outdoor infinito */
+  overflow: hidden;
+  top: 2.20%;
+
+  img {
+    width: 50%;
+    height: 100%;
+    margin-left: -50%;
+    /* Preenche a largura cortando o excesso vertical */
+    object-position: center;
+  }
+
+  .introdução {
+    background-color: #c2acd6dc;
+    padding: 5px;
+    position: absolute;
+    text-align: left;
+    left: 50%;
+    top: 0%;
+    width: 50%;
+    height: 100%;
+
+    h4 {
+      position: absolute;
+      margin-top: 10%;
+      font-size: 25px;
+      color: #3f0048;
+      font-weight: 500;
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    }
+
+    span {
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+      color: rgb(255, 255, 255);
+      font-size: 70px;
+      font-weight: 100;
+      margin-top: 2%;
+      position: absolute;
+    }
+
+    h2 {
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+      color: rgb(33, 11, 79);
+      font-size: 65px;
+      margin-top: 16%;
+      font-weight: 500;
+    }
+
+    p {
+      margin-top: 3%;
+      font-weight: 480;
+      font-size: 28px;
+      color: #e9e9e9;
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    }
+
+    #agendar {
+      margin-top: 4%;
+      position: absolute;
+      list-style: none;
+      text-decoration: none;
+      background-color: transparent;
+      padding: 10px;
+      border-radius: 10px;
+      color: white;
+      transition: 0.9s ease-in-out;
+      border: solid white 1px;
+
+      &:hover {
+        background: #9841ea;
+
+      }
+    }
+  }
+
+  #texto1 h2 span {
+    color: #770fd8;
+  }
+}
+
+.texto-CaixadeVideos {
+  left: 10%;
+  display: flex;
+  position: relative;
+  top: 8%;
+  width: 90%;
+  height: 30vh;
+  padding: 3px;
+
+  h1 {
+    color: #fefefe;
+    font-size: 66px;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-weight: 200;
+
+    span {
+      font-weight: 550;
+      background: radial-gradient(circle, rgb(255, 255, 255) -10%, rgb(112, 8, 112) 30%, rgba(108, 20, 60, 0.721) 60%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+  }
+}
+
+.caixaVideos {
+  overflow: hidden;
+  position: relative;
+  top: 8%;
+  padding: 10px;
+  width: 80%;
+  display: grid;
+  left: 10%;
+  height: 86vh;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+
+  #video1 {
+    max-width: 100%;
+    height: 600px;
+    border-radius: 15px;
+  }
+
+  #video2 {
+    max-width: 100%;
+    height: 600px;
+    border-radius: 15px;
+
+  }
+
+  #video3 {
+    max-width: 100%;
+    height: 600px;
+    border-radius: 15px;
+  }
+
+}
+
+/* Exemplo de cor roxa pet */
+#texto1 h2 {
+  font-size: 2.5rem;
+}
+
+/* 4. CARROSSEL DE SERVIÇOS */
+#serviços {
+  position: relative;
+  top: 13%;
+  padding: 60px 5%;
+  text-align: center;
+  min-height: 800px;
+
+  /* Garante espaço para os cards absolute */
+  h3 {
+    margin-top: -9%;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    color: #f4f3f5;
+    font-weight: 500;
+    font-size: 27px;
+  }
+
+  h1 {
+    font-weight: 100;
+    font-size: 60px;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    color: white;
+    background: radial-gradient(circle, rgb(255, 255, 255) -10%, rgb(112, 8, 112) 30%, rgba(108, 20, 60, 0.721) 60%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+
+    span {
+      font-weight: 700;
+    }
+  }
+
+  #descrição {
+    font-size: 20px;
+    font-weight: 400;
+    color: #cdc5d7;
+  }
+}
+
+.imagem1 {
+  top: 10%;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 70%;
+  height: 60vh;
+  border-radius: 20px;
+  opacity: 0;
+  visibility: hidden;
+  transition: 0.5s ease;
+  margin-top: 30px;
+
+  h2 {
+    color: white;
+    font-size: 36px;
+  }
+
+  p {
+    color: thistle;
+    font-weight: 500;
+  }
+
+  h2,
+  p {
+    background: linear-gradient(to right, rgb(61, 17, 24), rgb(116, 5, 159));
+    border-radius: 20px;
+    padding: 10px;
+    margin-top: -1px;
+  }
+}
+
+
+.ativo {
+  opacity: 1;
+  visibility: visible;
+}
+
+.imagem1 img {
+
+  width: 35vw;
+  /* Ocupa 100% da largura da div pai */
+  height: 100%;
+  /* Ocupa 100% da altura da div pai */
+  object-fit: cover;
+  /* Preenche o espaço sem esticar o rosto da pessoa na foto */
+
+  border-radius: 20px;
+
+}
+
+/* Botões do Carrossel */
+#setaDireita,
+#setaEsquerda {
+  position: absolute;
+  top: 40%;
+  background: transparent;
+  border: none;
+  border-radius: 50%;
+  width: 45px;
+  height: 45px;
+  cursor: pointer;
+  z-index: 10;
+  color: white;
+  transition: 0.5s;
+
+  &:hover {
+    background-color: #afa2bb;
+    color: white;
+  }
+}
+
+#setaEsquerda {
+  left: 19%;
+}
+
+#setaDireita {
+  right: 19%;
+}
+
+#setaDireita img,
+#setaEsquerda img {
+  width: 25px;
+
+}
+
+/* 5. CAIXA DE PRODUTOS */
+.caixa-geral {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+  padding: 40px 5%;
+  margin: 90px 0;
+  top: 13%;
+  position: relative;
+
+  #banho {
+    background: linear-gradient(to right, rgb(10, 101, 236), rgba(0, 0, 0, 0.81));
+    cursor: pointer;
+    transition: 0.6s;
+    padding: 10px;
+    height: 55vh;
+
+    p {
+      margin-left: 40px;
+      width: 70%;
+      margin-top: 6%;
+      color: #fff;
+      line-height: 12px;
+      font-weight: 400;
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    }
+
+    img {
+      width: 250px;
+      height: 30vh;
+      object-fit: cover;
+      object-position: center;
+    }
+
+    h5 {
+      color: white;
+      font-size: 19px;
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    }
+
+    h3 {
+      text-align: center;
+      color: white;
+      margin-top: 2%;
+      font-weight: 300;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      font-size: 32px;
+
+    }
+
+    &:hover {
+      transform: translateY(2%);
+      box-shadow: 1px -6px 49px 17px rgba(11, 135, 197, 0.738);
+
+      h3 {
+        color: #36a9cf;
+      }
+    }
+
+  }
+
+  #tosaa {
+    background: linear-gradient(to right, rgb(129, 218, 5), rgba(0, 0, 0, 0.81));
+    cursor: pointer;
+    transition: 0.6s;
+    height: 55vh;
+    text-align: center;
+    padding: 10px;
+
+    img {
+      width: 250px;
+      height: 30vh;
+      object-fit: cover;
+      object-position: center;
+    }
+
+    p {
+      margin-top: 10%;
+      color: #fff;
+      line-height: 12px;
+      font-weight: 400;
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    }
+
+    h5 {
+      color: white;
+      font-size: 21px;
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    }
+
+    h3 {
+      text-align: center;
+      color: white;
+      margin-top: 6%;
+      font-weight: 300;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      font-size: 32px;
+    }
+
+    &:hover {
+      transform: translateY(2%);
+      box-shadow: 1px -6px 49px 17px rgba(61, 215, 9, 0.738);
+
+      h3 {
+        color: #a39b01;
+      }
+    }
+  }
+
+  #hospedagem {
+    background: linear-gradient(to right, rgb(229, 79, 10), rgba(0, 0, 0, 0.81));
+    cursor: pointer;
+    transition: 0.6s;
+    height: 55vh;
+    text-align: center;
+    padding: 10px;
+
+    img {
+      width: 250px;
+      height: 30vh;
+      object-fit: cover;
+      object-position: center;
+    }
+
+    p {
+      margin-top: 10%;
+      color: #fff;
+      line-height: 12px;
+      font-weight: 400;
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    }
+
+    h5 {
+      color: white;
+      font-size: 21px;
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    }
+
+    h3 {
+      text-align: center;
+      color: white;
+      margin-top: 6%;
+      font-weight: 300;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      font-size: 32px;
+    }
+
+    &:hover {
+      transform: translateY(2%);
+      box-shadow: 1px -6px 49px 17px rgba(217, 72, 4, 0.738);
+
+      h3 {
+        color: #d43b03;
+      }
+    }
+  }
+
+  #acessorio {
+    background: linear-gradient(to right, rgb(152, 4, 186), rgba(0, 0, 0, 0.81));
+    cursor: pointer;
+    transition: 0.6s;
+    height: 55vh;
+    text-align: center;
+    padding: 10px;
+
+    img {
+      width: 250px;
+      height: 30vh;
+      object-fit: cover;
+      object-position: center;
+    }
+
+    p {
+      margin-top: 10%;
+      color: #fff;
+      line-height: 12px;
+      font-weight: 400;
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    }
+
+    h5 {
+      color: white;
+      font-size: 21px;
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    }
+
+    h3 {
+      text-align: center;
+      color: white;
+      margin-top: 6%;
+      font-weight: 300;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      font-size: 32px;
+    }
+
+    &:hover {
+      transform: translateY(2%);
+      box-shadow: 1px -6px 49px 17px rgba(129, 3, 149, 0.916);
+
+      h3 {
+        color: #a221d5;
+      }
+    }
+  }
+}
+
+.produto {
+  border: 1px solid #eee;
+  padding: 20px;
+  border-radius: 15px;
+  text-align: center;
+  transition: 0.3s;
+}
+
+.produto img {
+  width: 100%;
+  border-radius: 10px;
+  margin-bottom: 10px;
+}
+
+.produto button {
+  background: #770fd8;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+
+
+}
+
+/* 6. ANÚNCIO E WHATSAPP */
+.anuncio {
+  background: radial-gradient(circle, rgb(102, 14, 134), rgb(197, 5, 149));
+  color: white;
+  padding: 15px;
+  overflow: hidden;
+  white-space: nowrap;
+  position: relative;
+  top: 14%;
+}
+
+.anuncio h3 {
+  display: inline-block;
+  animation: scrollText 67s linear infinite;
+}
+
+@keyframes scrollText {
+  from {
+    transform: translateX(100%);
+  }
+
+  to {
+    transform: translateX(-100%);
+  }
+}
+
+#whats {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  z-index: 100;
+
+  h3 {
+    text-decoration: none;
+    list-style: none;
+    color: white;
+  }
+}
+
+#zap {
+  width: 60px;
+  text-decoration: none;
+}
+
+/* 7. LOCALIZAÇÃO E FOOTER */
+.localizacao {
+  background: linear-gradient(to right, #770fd8, black);
+  text-align: center;
+  padding: 40px 5%;
+  position: relative;
+  top: 20%;
+
+  h2 {
+    color: white;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-size: 35px
+  }
+}
+
+.localizacao iframe {
+  width: 100%;
+  max-width: 800px;
+  border-radius: 15px;
+  height: 50vh;
+}
+
+footer {
+  position: relative;
+  background: #45004e;
+  color: white;
+  padding: 40px 5% 10px;
+  top: 20%;
+
+  .linha {
+    border: solid 1px rgba(167, 14, 159, 0.749);
+    width: 80%;
+    margin: 10px 0;
+  }
+}
+
+.petShop {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 30px;
+
+  p {
+    color: rgb(212, 209, 209);
+  }
+}
+
+.THEDOG,
+.LinksRapidos {
+  flex: 1;
+  min-width: 250px;
+}
+
+.redesSociais img {
+  width: 30px;
+  margin-right: 10px;
+
+  margin-top: 20px;
+}
+
+.LinksRapidos a {
+  display: block;
+  color: #ccc;
+  text-decoration: none;
+  margin: 5px 0;
+}
+
+/* --- RESPONSIVIDADE --- */
+@media (max-width: 1024px) {
+  .texto-CaixadeVideos h1 {
+    font-size: 48px;
+  }
+
+  .caixaVideos {
+    grid-template-columns: repeat(auto-fit, minmax(45%, 1fr));
+  }
+
+
+  #serviços {
+    min-height: 700px;
+
+    h1 {
+      font-size: 50px;
+    }
+
+    h3 {
+      margin-top: -5%;
+    }
+  }
+
+  .imagem1 {
+    width: 85%;
+    height: 50vh;
+  }
+
+  .imagem1 img {
+    width: 45vw;
+    /* Aumenta a largura da imagem interna para preencher melhor */
+  }
+
+  #setaEsquerda {
+    left: 5%;
+  }
+
+  #setaDireita {
+    right: 5%;
+  }
+}
+
+/* TABLETS (992px) */
+@media (max-width: 768px) {
+  .Body-Home {
+    height: 747vh;
+
+    #texto1 {
+      height: auto;
+      /* Permite que a altura cresça conforme o conteúdo no celular */
+      min-height: 610px;
+      display: flex;
+      flex-direction: column;
+
+      img {
+        width: 100%;
+        height: 300px;
+        /* Imagem fica no topo em telas menores */
+        margin-left: 0;
+        position: relative;
+      }
+
+      .introdução {
+        position: relative;
+        width: 100%;
+        left: 0;
+        padding: 20px;
+        height: auto;
+
+        h4,
+        span,
+        #agendar {
+          position: relative;
+          /* Remove o absolute para o texto fluir naturalmente */
+          margin-top: 10px;
+          display: block;
+        }
+
+        h2 {
+          font-size: 40px;
+          /* Redução para caber na tela do celular */
+          margin-top: 20px;
+          line-height: 23px;
+        }
+
+        span {
+          font-size: 45px;
+          margin-top: -px;
+        }
+
+        p {
+          font-size: 20px;
+        }
+
+        #agendar {
+          display: inline-block;
+          margin-top: 20px;
+          margin-bottom: 20px;
+        }
+      }
+    }
+
+    .texto-CaixadeVideos {
+      width: 90%;
+      left: 5%;
+      top: 5%;
+
+      h1 {
+        font-size: 32px;
+        /* Texto menor para não quebrar layout */
+        text-align: center;
+      }
+    }
+
+    .caixaVideos {
+      align-items: center;
+      height: 15%;
+      width: 90%;
+      left: 5%;
+      top: 4%;
+      grid-template-columns: 1fr;
+      /* Um vídeo por linha */
+      padding: 10px;
+
+      #video1,
+      #video2,
+      #video3 {
+        border-radius: 20px;
+        width: 100vw;
+        height: 300px;
+        /* Altura menor para telas de celular */
+      }
+    }
+
+
+    #serviços {
+      padding: 40px 2%;
+      min-height: 600px;
+      top: 5%;
+
+      h3 {
+        margin-top: -50px;
+        font-size: 20px;
+      }
+
+      h1 {
+        font-size: 35px;
+      }
+
+      #descrição {
+        font-size: 16px;
+        padding: 0 10px;
+      }
+    }
+
+    .imagem1 {
+      width: 95%;
+      height: 40vh;
+      margin-top: 30px;
+
+      h2 {
+        font-size: 24px;
+      }
+
+      p {
+        font-size: 14px;
+      }
+    }
+
+    .imagem1 img {
+      width: 100%;
+      /* No celular a imagem ocupa a largura total do card */
+    }
+
+    #setaDireita,
+    #setaEsquerda {
+      top: 67%;
+      bottom: -60px;
+      /* Move as setas para baixo do card no celular */
+      background: rgba(112, 8, 112, 0.5);
+      /* Fundo leve para visibilidade */
+    }
+
+    #setaEsquerda {
+      left: 10%;
+    }
+
+    #setaDireita {
+      right: 10%;
+    }
+
+    .caixa-geral {
+      top: 5%;
+    }
+
+    .anuncio {
+      top: 5.60%;
+    }
+
+    .localizacao {
+      top: 8%;
+    }
+
+    footer {
+      top: 10%;
+    }
+  }
+}
